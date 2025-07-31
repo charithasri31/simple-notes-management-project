@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Notes Management System</title>
+
+    <!-- Link to external CSS file in Flask's static folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}">
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <center>{{ message }}</center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+    <div class="form-container">
+        <form method="post">
+            <h3>Register for Simple Notes Management System</h3>
+                        <label for="email">Email</label>
+
+            <input type="email" name="email" placeholder="Enter your email..." required><br><br>
+                        <label for="username">Username</label>
+
+            <input type="text" name="username" placeholder="Enter your username..." required><br><br>
+            <label for="password">Password</label>
+
+            <input type="password" name="password" placeholder="Enter your password..." required><br><br>
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+                <option value="prefer_not_to_say">Prefer not to say</option>
+            </select><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

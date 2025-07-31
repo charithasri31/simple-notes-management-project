@@ -1,0 +1,15 @@
+{% extends 'dashboard.html' %}
+{% block content %}
+</head>
+<body>
+    <center>
+        <form method="post">
+            <h3>Update Notes</h3>
+            <input type="text" name="title" value="{{notesdata[1]}}"/><br/><br/>
+            <textarea rows="10" cols="20" name="description">{{notesdata[2]}}</textarea><br/><br/>
+            {{notesdata[3]}}<br/><br/>
+            <button>Submit</button>
+        </form>
+    </center>
+</body>
+{% endblock %}

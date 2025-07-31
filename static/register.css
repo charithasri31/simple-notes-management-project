@@ -1,0 +1,93 @@
+/* Apply a modern font and background gradient */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the form with flexbox */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Styled card form */
+form {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Heading */
+h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 1.5em;
+}
+
+/* Input and select fields */
+input,
+select {
+    width: 100%;
+    padding: 12px 4px;
+    margin: 10px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+    border-color: #2193b0;
+    outline: none;
+}
+
+/* Button styling */
+button {
+    background-color: #2193b0;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1a7897;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive layout for small screens */
+@media screen and (max-width: 480px) {
+    form {
+        padding: 30px 20px;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+}

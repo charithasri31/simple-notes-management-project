@@ -1,0 +1,14 @@
+{% extends 'dashboard.html' %}
+{% block content %}
+</head>
+<body>
+    <center>
+        
+            <h3>View Notes</h3>
+            <input type="text" name="title" value="{{notesdata[1]}}" readonly/><br/><br/>
+            <textarea rows="10" cols="25" name="description" readonly>{{notesdata[2]}}</textarea><br/><br/>
+            <label>Created Time:{{notesdata[3]}}</label>
+        
+    </center>
+</body>
+{% endblock %}

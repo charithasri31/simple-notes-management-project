@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='welcome.css') }}">
+
+</head>
+<body>
+    <center>
+        <h3>-----Welcome to Simple Notes Management System-----</h3>
+    <a href="{{url_for('register')}}"><button>Register</button></a>
+    <a href="{{url_for('login')}}"><button>Login</button></a>
+    </center>
+</body>
+</html>
